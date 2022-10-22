@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         configurations.all {
@@ -12,7 +12,7 @@ android {
 
         applicationId "testantony.resumemaker.cvmaker.profilecreate"
         minSdk 21
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
