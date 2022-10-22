@@ -14,5 +14,6 @@ public class MyApplication extends Application {
 
         MobileAds.initialize(this, initializationStatus -> {
         });
+
     }
 }

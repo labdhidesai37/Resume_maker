@@ -36,7 +36,7 @@ public final class MainActivity extends AppCompatActivity {
 
         prefs = new SharedPrefs(MainActivity.this);
 
-        AppManage.getInstance(MainActivity.this).loadInterstitialAd(this, AppManage.ADMOB_I[0], AppManage.FACEBOOK_I[0]);
+
 
 
         FrameLayout fl_native = findViewById(R.id.fl_native);
@@ -73,10 +73,11 @@ public final class MainActivity extends AppCompatActivity {
                 str = "4";
                 break;
             case R.id.action_hobby:
-                AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, this::IntentHobby, "", AppManage.app_mainClickCntSwAd);
+                AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, this::IntentHobby,"",AppManage.app_mainClickCntSwAd);
+
                 return;
             case R.id.action_language:
-                AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, this::IntentLanguage, "", AppManage.app_mainClickCntSwAd);
+                AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, this::IntentLanguage,"",AppManage.app_mainClickCntSwAd);
                 return;
             case R.id.action_personal_info:
                 str = "0";
@@ -91,12 +92,12 @@ public final class MainActivity extends AppCompatActivity {
                 str = "6";
                 break;
             case R.id.userSkill:
-                AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, this::IntentSkill, "", AppManage.app_mainClickCntSwAd);
+                AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, this::IntentSkill,"",AppManage.app_mainClickCntSwAd);
                 return;
             case R.id.settingDetail:
                 AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, () -> {
                     IntentResume("7");
-                }, "", AppManage.app_mainClickCntSwAd);
+                },"",AppManage.app_mainClickCntSwAd);
                 return;
             default:
                 str = "1";
@@ -105,7 +106,7 @@ public final class MainActivity extends AppCompatActivity {
 
         AppManage.getInstance(MainActivity.this).showInterstitialAd(MainActivity.this, () -> {
             IntentResume(str);
-        }, "", AppManage.app_mainClickCntSwAd);
+        },"",AppManage.app_mainClickCntSwAd);
     }
 
     private void IntentHobby() {
