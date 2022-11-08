@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbarBackground"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBack"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerVertical="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_back_black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toolBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imgBack"
+        android:ellipsize="end"
+        android:fontFamily="@font/font_bold"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:text="@string/app_name"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_15sdp" />
+</RelativeLayout>
